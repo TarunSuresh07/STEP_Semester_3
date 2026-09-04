@@ -1,39 +1,4 @@
 public class W3Assignment5 {
-
-    public static void main(String[] args) {
-        ParkingSlot slotA1 = new ParkingSlot("A1", 10, 0);
-        ParkingSlot slotA2 = new ParkingSlot("A2", 10, 0);
-
-        CompanyEmployeeRecord divya = new CompanyEmployeeRecord(
-            "Divya",
-            "E101",
-            new ManagerEmployee("E101", "Divya", 70000, 8000),
-            slotA1
-        );
-
-        CompanyEmployeeRecord karan = new CompanyEmployeeRecord(
-            "Karan",
-            "E102",
-            new Employee("E102", "Karan", 40000),
-            slotA2
-        );
-
-        CompanyEmployeeRecord meera = new CompanyEmployeeRecord(
-            "Meera",
-            "E103",
-            new InternEmployee("E103", "Meera", 12000, 10000),
-            null
-        );
-
-        ParkingSlot.safeAllot(new ParkingSlot[] { slotA1 }, "TN01AA1111");
-        ParkingSlot.safeAllot(new ParkingSlot[] { slotA2 }, "TN01BB2222");
-
-        System.out.println(divya.fullProfile());
-        System.out.println(karan.fullProfile());
-        System.out.println(meera.fullProfile());
-        System.out.println("Total records: " + CompanyEmployeeRecord.totalRecords);
-    }
-
     static class CompanyEmployeeRecord {
         String name;
         String empId;
@@ -139,5 +104,39 @@ public class W3Assignment5 {
                 slot.allot(vehicleNo);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        ParkingSlot slotA1 = new ParkingSlot("A1", 10, 0);
+        ParkingSlot slotA2 = new ParkingSlot("A2", 10, 0);
+
+        CompanyEmployeeRecord divya = new CompanyEmployeeRecord(
+            "Divya",
+            "E101",
+            new ManagerEmployee("E101", "Divya", 70000, 8000),
+            slotA1
+        );
+
+        CompanyEmployeeRecord karan = new CompanyEmployeeRecord(
+            "Karan",
+            "E102",
+            new Employee("E102", "Karan", 40000),
+            slotA2
+        );
+
+        CompanyEmployeeRecord meera = new CompanyEmployeeRecord(
+            "Meera",
+            "E103",
+            new InternEmployee("E103", "Meera", 12000, 10000),
+            null
+        );
+
+        ParkingSlot.safeAllot(new ParkingSlot[] { slotA1 }, "TN01AA1111");
+        ParkingSlot.safeAllot(new ParkingSlot[] { slotA2 }, "TN01BB2222");
+
+        System.out.println(divya.fullProfile());
+        System.out.println(karan.fullProfile());
+        System.out.println(meera.fullProfile());
+        System.out.println("Total records: " + CompanyEmployeeRecord.totalRecords);
     }
 }

@@ -1,4 +1,18 @@
 public class W3Problem3 {
+    static class HostelRoom {
+        public String roomNo;
+        public int beds;
+        public int occupied;
+
+        public void allot(String studentName) {
+            if (occupied < beds) {
+                System.out.println(studentName + " allotted to room " + roomNo);
+                occupied++;
+            } else {
+                System.out.println("Waiting list: room " + roomNo + " is full");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         HostelRoom room214 = new HostelRoom();
@@ -19,20 +33,5 @@ public class W3Problem3 {
 
         room214.allot("Meera");
         room214.allot("Karthik");
-    }
-
-    static class HostelRoom {
-        public String roomNo;
-        public int beds;
-        public int occupied;
-
-        public void allot(String studentName) {
-            if (occupied < beds) {
-                System.out.println(studentName + " allotted to room " + roomNo);
-                occupied++;
-            } else {
-                System.out.println("Waiting list: room " + roomNo + " is full");
-            }
-        }
     }
 }

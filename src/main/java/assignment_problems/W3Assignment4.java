@@ -1,13 +1,4 @@
 public class W3Assignment4 {
-
-    public static void main(String[] args) {
-        System.out.println("--- Broken version ---");
-        runBrokenVersion();
-
-        System.out.println("--- Fixed version ---");
-        runFixedVersion();
-    }
-
     private static void runBrokenVersion() {
         BrokenLibraryMember aditi = new BrokenLibraryMember("Aditi");
         BrokenLibraryMember rohan = new BrokenLibraryMember("Rohan");
@@ -63,5 +54,13 @@ public class W3Assignment4 {
         public static void printTotalMembers() {
             System.out.println("Total members: " + memberCount);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("--- Broken version ---");
+        runBrokenVersion();
+
+        System.out.println("--- Fixed version ---");
+        runFixedVersion();
     }
 }

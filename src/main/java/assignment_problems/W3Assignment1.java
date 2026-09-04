@@ -1,22 +1,4 @@
 public class W3Assignment1 {
-
-    public static void main(String[] args) {
-        BookIssue[] issues = {
-            new BookIssue("Clean Code", "Aditi", 18),
-            new BookIssue("Effective Java", "Rohan", 5),
-            new BookIssue("Refactoring", "Meera", 0),
-            new BookIssue("DSA Handbook", "Karthik", 21),
-            new BookIssue("Design Patterns", "Suresh", 9)
-        };
-
-        for (BookIssue issue : issues) {
-            String status = issue.isSeverelyOverdue() ? "Severely overdue" : "OK";
-            System.out.println(issue.getTitle() + " - " + issue.getDaysOverdue() + " days - " + status);
-        }
-
-        System.out.println("Total fine collected: Rs " + BookIssue.totalFineCollected(issues));
-    }
-
     static class BookIssue {
         private String title;
         private String borrowerName;
@@ -54,5 +36,22 @@ public class W3Assignment1 {
             }
             return total;
         }
+    }
+
+    public static void main(String[] args) {
+        BookIssue[] issues = {
+            new BookIssue("Clean Code", "Aditi", 18),
+            new BookIssue("Effective Java", "Rohan", 5),
+            new BookIssue("Refactoring", "Meera", 0),
+            new BookIssue("DSA Handbook", "Karthik", 21),
+            new BookIssue("Design Patterns", "Suresh", 9)
+        };
+
+        for (BookIssue issue : issues) {
+            String status = issue.isSeverelyOverdue() ? "Severely overdue" : "OK";
+            System.out.println(issue.getTitle() + " - " + issue.getDaysOverdue() + " days - " + status);
+        }
+
+        System.out.println("Total fine collected: Rs " + BookIssue.totalFineCollected(issues));
     }
 }

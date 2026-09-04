@@ -1,19 +1,4 @@
 public class W3Assignment3 {
-
-    public static void main(String[] args) {
-        ParkingSlot[] availableSlots = {
-            new ParkingSlot("A1", 4, 3),
-            new ParkingSlot("A2", 5, 5)
-        };
-        safeAllot(availableSlots, "TN09AB1234");
-
-        ParkingSlot[] fullSlots = {
-            new ParkingSlot("A1", 4, 4),
-            new ParkingSlot("A2", 5, 5)
-        };
-        safeAllot(fullSlots, "TN09AB1234");
-    }
-
     public static ParkingSlot findAvailableSlot(ParkingSlot[] slots) {
         for (ParkingSlot slot : slots) {
             if (slot.occupiedCount < slot.capacity) {
@@ -49,5 +34,19 @@ public class W3Assignment3 {
                 occupiedCount++;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        ParkingSlot[] availableSlots = {
+            new ParkingSlot("A1", 4, 3),
+            new ParkingSlot("A2", 5, 5)
+        };
+        safeAllot(availableSlots, "TN09AB1234");
+
+        ParkingSlot[] fullSlots = {
+            new ParkingSlot("A1", 4, 4),
+            new ParkingSlot("A2", 5, 5)
+        };
+        safeAllot(fullSlots, "TN09AB1234");
     }
 }

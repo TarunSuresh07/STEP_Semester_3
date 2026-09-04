@@ -1,36 +1,4 @@
 public class W3Problem5 {
-
-    public static void main(String[] args) {
-        SrmStudent ravi = new SrmStudent(
-            "Ravi",
-            "RA001",
-            new FeeAccount("RA001", 200000, 0),
-            new HostelRoom("C-214", 2)
-        );
-
-        SrmStudent anitha = new SrmStudent(
-            "Anitha",
-            "RA002",
-            new FeeAccount("RA002", 180000, 0),
-            new HostelRoom("C-507", 2)
-        );
-
-        SrmStudent karthik = new SrmStudent(
-            "Karthik",
-            "RA003",
-            new FeeAccount("RA003", 180000, 0),
-            new HostelRoom("C-309", 2)
-        );
-
-        ravi.getFeeAccount().payInTwoInstallments(120000);
-        karthik.getFeeAccount().setScholarshipPercent(20);
-
-        System.out.println(ravi.fullStatus());
-        System.out.println(anitha.fullStatus());
-        System.out.println(karthik.fullStatus());
-        System.out.println("Total students: " + SrmStudent.totalStudents);
-    }
-
     static class SrmStudent {
         String name;
         String regNo;
@@ -106,5 +74,36 @@ public class W3Problem5 {
             this.beds = beds;
             this.occupied = 0;
         }
+    }
+
+    public static void main(String[] args) {
+        SrmStudent ravi = new SrmStudent(
+            "Ravi",
+            "RA001",
+            new FeeAccount("RA001", 200000, 0),
+            new HostelRoom("C-214", 2)
+        );
+
+        SrmStudent anitha = new SrmStudent(
+            "Anitha",
+            "RA002",
+            new FeeAccount("RA002", 180000, 0),
+            new HostelRoom("C-507", 2)
+        );
+
+        SrmStudent karthik = new SrmStudent(
+            "Karthik",
+            "RA003",
+            new FeeAccount("RA003", 180000, 0),
+            new HostelRoom("C-309", 2)
+        );
+
+        ravi.getFeeAccount().payInTwoInstallments(120000);
+        karthik.getFeeAccount().setScholarshipPercent(20);
+
+        System.out.println(ravi.fullStatus());
+        System.out.println(anitha.fullStatus());
+        System.out.println(karthik.fullStatus());
+        System.out.println("Total students: " + SrmStudent.totalStudents);
     }
 }

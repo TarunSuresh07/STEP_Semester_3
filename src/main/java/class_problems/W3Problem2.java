@@ -1,16 +1,4 @@
 public class W3Problem2 {
-
-    public static void main(String[] args) {
-        FeeAccount accountA = new FeeAccount("RA001", 200000, 0);
-        accountA.payInTwoInstallments(120000);
-
-        FeeAccount accountB = new FeeAccount("RA002", 180000, 0);
-        double accountBDue = accountB.effectiveDue(20);
-
-        System.out.println("Account A due: Rs " + accountA.getDue());
-        System.out.println("Account B effective due (20% scholarship): Rs " + accountBDue);
-    }
-
     static class FeeAccount {
         private String regNo;
         private double totalFee;
@@ -43,5 +31,16 @@ public class W3Problem2 {
             double due = getDue();
             return due - (due * scholarshipPercent / 100);
         }
+    }
+
+    public static void main(String[] args) {
+        FeeAccount accountA = new FeeAccount("RA001", 200000, 0);
+        accountA.payInTwoInstallments(120000);
+
+        FeeAccount accountB = new FeeAccount("RA002", 180000, 0);
+        double accountBDue = accountB.effectiveDue(20);
+
+        System.out.println("Account A due: Rs " + accountA.getDue());
+        System.out.println("Account B effective due (20% scholarship): Rs " + accountBDue);
     }
 }

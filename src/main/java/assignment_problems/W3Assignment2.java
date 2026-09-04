@@ -1,15 +1,4 @@
 public class W3Assignment2 {
-
-    public static void main(String[] args) {
-        Employee plain = new Employee("E001", "Plain Employee", 40000);
-        ManagerEmployee manager = new ManagerEmployee("E002", "Manager", 70000, 8000);
-        InternEmployee intern = new InternEmployee("E003", "Intern", 12000, 10000);
-
-        System.out.println("Plain employee pay: Rs " + getEffectivePay(plain));
-        System.out.println("Manager effective pay: Rs " + getEffectivePay(manager));
-        System.out.println("Intern effective pay: Rs " + getEffectivePay(intern));
-    }
-
     private static double getEffectivePay(Employee employee) {
         if (employee instanceof ManagerEmployee) {
             return ((ManagerEmployee) employee).effectiveSalary();
@@ -60,5 +49,15 @@ public class W3Assignment2 {
         public double effectiveSalary() {
             return Math.min(getSalary(), stipendCap);
         }
+    }
+
+    public static void main(String[] args) {
+        Employee plain = new Employee("E001", "Plain Employee", 40000);
+        ManagerEmployee manager = new ManagerEmployee("E002", "Manager", 70000, 8000);
+        InternEmployee intern = new InternEmployee("E003", "Intern", 12000, 10000);
+
+        System.out.println("Plain employee pay: Rs " + getEffectivePay(plain));
+        System.out.println("Manager effective pay: Rs " + getEffectivePay(manager));
+        System.out.println("Intern effective pay: Rs " + getEffectivePay(intern));
     }
 }

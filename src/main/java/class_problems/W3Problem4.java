@@ -1,17 +1,4 @@
 public class W3Problem4 {
-
-    public static void main(String[] args) {
-        SrmStudent ravi = new SrmStudent("Ravi", 85);
-        SrmStudent meera = new SrmStudent("Meera", 90);
-        SrmStudent karthik = new SrmStudent("Karthik", 78);
-
-        ravi.printIdCard();
-        meera.printIdCard();
-        karthik.printIdCard();
-
-        SrmStudent.printTotalAdmissions();
-    }
-
     static class SrmStudent {
         private String name;
         private String regNo;
@@ -34,5 +21,17 @@ public class W3Problem4 {
         public static void printTotalAdmissions() {
             System.out.println("Students admitted so far: " + admissionCount);
         }
+    }
+
+    public static void main(String[] args) {
+        SrmStudent ravi = new SrmStudent("Ravi", 85);
+        SrmStudent meera = new SrmStudent("Meera", 90);
+        SrmStudent karthik = new SrmStudent("Karthik", 78);
+
+        ravi.printIdCard();
+        meera.printIdCard();
+        karthik.printIdCard();
+
+        SrmStudent.printTotalAdmissions();
     }
 }

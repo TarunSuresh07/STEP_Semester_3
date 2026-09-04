@@ -1,22 +1,4 @@
 public class W3Problem1 {
-
-    public static void main(String[] args) {
-        SrmStudent[] students = {
-            new SrmStudent("Ravi", 82),
-            new SrmStudent("Anitha", 68),
-            new SrmStudent("Karthik", 91),
-            new SrmStudent("Meera", 74),
-            new SrmStudent("Suresh", 60)
-        };
-
-        for (SrmStudent student : students) {
-            String status = student.isEligible() ? "Eligible" : "Detained";
-            System.out.println(student.getName() + " - " + student.getAttendance() + "% - " + status);
-        }
-
-        System.out.println("Class average: " + SrmStudent.classAverage(students) + "%");
-    }
-
     static class SrmStudent {
         private String name;
         private String regNo;
@@ -55,5 +37,22 @@ public class W3Problem1 {
             }
             return (double) total / students.length;
         }
+    }
+
+    public static void main(String[] args) {
+        SrmStudent[] students = {
+            new SrmStudent("Ravi", 82),
+            new SrmStudent("Anitha", 68),
+            new SrmStudent("Karthik", 91),
+            new SrmStudent("Meera", 74),
+            new SrmStudent("Suresh", 60)
+        };
+
+        for (SrmStudent student : students) {
+            String status = student.isEligible() ? "Eligible" : "Detained";
+            System.out.println(student.getName() + " - " + student.getAttendance() + "% - " + status);
+        }
+
+        System.out.println("Class average: " + SrmStudent.classAverage(students) + "%");
     }
 }
