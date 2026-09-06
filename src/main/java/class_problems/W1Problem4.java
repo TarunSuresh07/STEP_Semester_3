@@ -1,21 +1,31 @@
 public class W1Problem4 {
-    public static String maskPhoneNumber(String phone) {
-        if (phone.length() != 10)
-            return "Invalid phone number";
+    public static char findFirstNonRepeatingChar(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            char current = text.charAt(i);
+            int frequency = 0;
 
-        for (int i = 0; i < phone.length(); i++) {
-            if (!Character.isDigit(phone.charAt(i)))
-                return "Invalid phone number";
+            for (int j = 0; j < text.length(); j++) {
+                if (text.charAt(j) == current)
+                    frequency++;
+            }
+
+            if (frequency == 1)
+                return current;
         }
 
-        StringBuilder maskedNumber = new StringBuilder("XXXXXX");
-        maskedNumber.append(phone.substring(6));
-        maskedNumber.insert(6, '-');
-        return maskedNumber.toString();
+        return '\0';
     }
 
     public static void main(String[] args) {
-        System.out.println(maskPhoneNumber("9876543210"));
-        System.out.println(maskPhoneNumber("98765"));
+        printResult("swiss");
+        printResult("aabbcc");
+    }
+
+    private static void printResult(String text) {
+        char result = findFirstNonRepeatingChar(text);
+        if (result == '\0')
+            System.out.println("No Non-Repeating Character Found");
+        else
+            System.out.println("First Non-Repeating Character: '" + result + "'");
     }
 }

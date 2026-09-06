@@ -1,20 +1,27 @@
 public class W1Problem3 {
-    public static String validateFileExtension(String filename) {
-        int dotIndex = filename.lastIndexOf('.');
+    public static String getBmiStatus(double bmi) {
+        if (bmi < 18.5)
+            return "Underweight";
+        if (bmi < 25)
+            return "Normal";
+        if (bmi < 30)
+            return "Overweight";
+        return "Obese";
+    }
 
-        if (dotIndex == -1 || dotIndex == filename.length() - 1)
-            return "Rejected — invalid file type";
+    public static void printWellnessReport(double[] heights, double[] weights) {
+        System.out.println("Person | Height (m) | Weight (kg) | BMI | Status");
 
-        String extension = filename.substring(dotIndex + 1);
-        if (extension.equalsIgnoreCase("pdf") || extension.equalsIgnoreCase("docx")
-                || extension.equalsIgnoreCase("zip"))
-            return "Accepted";
-
-        return "Rejected — invalid file type";
+        for (int i = 0; i < heights.length; i++) {
+            double bmi = weights[i] / (heights[i] * heights[i]);
+            System.out.printf("Person %d | %.2f | %.2f | %.2f | %s%n",
+                    i + 1, heights[i], weights[i], bmi, getBmiStatus(bmi));
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println(validateFileExtension("Assignment1.PDF"));
-        System.out.println(validateFileExtension("notes.txt"));
+        double[] heights = {1.75, 1.60};
+        double[] weights = {70, 90};
+        printWellnessReport(heights, weights);
     }
 }
