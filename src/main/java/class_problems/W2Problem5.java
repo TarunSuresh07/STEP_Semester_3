@@ -1,4 +1,4 @@
-public class W1Problem5 {
+public class W2Problem5 {
     public static String normalizeReference(String raw) {
         String reference = raw.trim();
         if (reference.length() < 3)

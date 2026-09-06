@@ -1,4 +1,4 @@
-public class W1Assignment3 {
+public class W2Assignment3 {
     public static void parseInventoryRecord(String csvLine) {
         String[] fields = csvLine.split(",");
 

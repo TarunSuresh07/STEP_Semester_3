@@ -1,4 +1,4 @@
-public class W1Assignment1 {
+public class W2Assignment1 {
     public static void checkPinLength(String pin) {
         if (pin.length() != 4)
             System.out.println("Invalid PIN — must be exactly 4 digits.");

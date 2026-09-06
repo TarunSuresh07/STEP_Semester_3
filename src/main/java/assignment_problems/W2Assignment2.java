@@ -1,4 +1,4 @@
-public class W1Assignment2 {
+public class W2Assignment2 {
     public static String reverseEachWord(String sentence) {
         String[] words = sentence.split(" ");
         StringBuilder result = new StringBuilder();

@@ -1,4 +1,4 @@
-public class W1Problem2 {
+public class W2Problem2 {
     public static void parseStudentRecord(String csvLine) {
         String[] fields = csvLine.split(",");
 

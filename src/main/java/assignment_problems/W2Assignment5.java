@@ -1,4 +1,4 @@
-public class W1Assignment5 {
+public class W2Assignment5 {
     public static void printFilteredWordFrequency(String feedback) {
         String cleanedText = feedback.toLowerCase().replace(".", "").replace(",", "");
         String[] words = cleanedText.split("\\s+");

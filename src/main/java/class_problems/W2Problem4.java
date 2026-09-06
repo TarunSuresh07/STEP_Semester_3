@@ -1,4 +1,4 @@
-public class W1Problem4 {
+public class W2Problem4 {
     public static String maskPhoneNumber(String phone) {
         if (phone.length() != 10)
             return "Invalid phone number";

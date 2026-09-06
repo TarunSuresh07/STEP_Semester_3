@@ -1,4 +1,4 @@
-public class W1Problem1 {
+public class W2Problem1 {
     public static void countVowelsAndConsonants(String text) {
         int vowels = 0;
         int consonants = 0;

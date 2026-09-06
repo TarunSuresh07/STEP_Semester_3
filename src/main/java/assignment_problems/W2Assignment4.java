@@ -1,4 +1,4 @@
-public class W1Assignment4 {
+public class W2Assignment4 {
     public static String normalizeCode(String raw) {
         String code = raw.trim();
         if (code.length() < 3)

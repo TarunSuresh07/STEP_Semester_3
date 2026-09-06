@@ -1,4 +1,4 @@
-public class W1Problem3 {
+public class W2Problem3 {
     public static String validateFileExtension(String filename) {
         int dotIndex = filename.lastIndexOf('.');
 
