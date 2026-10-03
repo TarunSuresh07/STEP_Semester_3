@@ -1,20 +1,20 @@
-public class W8Problem3 {
+public class W9Assignment3 {
     public static void main(String[] args) {
-        Employee e = new Employee(101, "Rahul");
-        e.display();
+        Product p = new Product(102, "Mobile");
+        p.show();
     }
 }
 
-class Employee {
+class Product {
     int id;
     String name;
 
-    Employee(int id, String name) {
+    Product(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    void display() {
+    void show() {
         System.out.println("ID: " + id);
         System.out.println("Name: " + name);
     }
